@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <link rel ="stylesheet" href="css/CPC.css">
+    <link rel ="stylesheet" href="css/style2.css">
+    <title>CPCショップ</title>
+</head>
+
+<body>
+    <div id="control">
+        <div class="control_content">
+            <p id="ans" style="color: rgb(0 197 255);">正解！</p>
+            <p id="control_str"></p>
+            <div class="game_start" onclick="">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <body>
+
+
+    <div id="bool">
+        <h1>今見ているサイトは偽サイト！？</h1>
+    </div>
+
+    <!--正規サイト-->
+    <div class="regular_site">
+        <div id="virus">
+            <div class="virus_content">
+                <p id="alert1">すぐに当社にご連絡ください。当社のエンジニアが電話で削除プロセスをご案内いたします。<br>お使いのコンピュータは無効になっています。<br>CPCサポートに連絡する: (0101)XXXX-XXXX</p>
+                <p id="alert2"><span class="title">CPCセキュリティ</span>CPCサポートに連絡する: <br style="display: none;"><span class="phone">(0101)XXXX-XXXX</span></p>
+                <div id="alert5">
+                    <div class="title">
+                        <img src="./img/kabe.png">
+                        <h1>CPC-CVK</h1>
+                    </div>
+                    <p>サポートに電話する:<br>(0101)XXXX-XXXX（セキュリティサポート）</p>
+                </div>
+                <div id="alert3">
+                    <p class="title">CPC VirusKiller - セキュリティ警告</p>
+                    <p class="content"><span>**このPCへのアクセスはセキュリティ上の理由でブロックされています**</span><br>お使いのコンピュータは、トロイの木馬スパイウェアに感染していることを警告しています。次のデータが危険にされされています。<br><br>＞電子メールの資格情報<br>＞銀行のパスワード<br>＞ログイン情報<br>＞写真とドキュメント<br><br><br>CPC VirusKillerは、パスワード、オンラインID、財務情報、個人ファイル、写真、またはドキュメントを盗む可能性のある、このデバイス上の潜在的に不要なアドウェアを検出しました。<br><br>エンジニアが電話で削除プロセスを案内できるように、すぐにご連絡いただく必要があります。<br><br>すぐにCPCサポートに連絡して、この脅威を報告し、個人情報の盗難を防ぎ、このデバイスへのアクセスのロックを解除してください。<br><span class="phone">CPCサポートに電話する:(0101)XXXX-XXXX（無料電話）</span></p>
+                    <div class="btn">
+                        <p><span>キャンセル</span><span>許可する</span></p>
+                    </div>
+                </div>
+                <div id="alert4">
+                    <div class="head">
+                        <div style="display: flex;"><img src="./img/tate.png"><h2>CPC VirusKiller セキュリティセンター</h2></div>
+                        <p class="close">✕</p>
+                    </div>
+                    <p class="value">Address IP:XX.X.XX.XX 12/25/2023, 10:04:47 AM<br>Location:Japan<br>ISP:XXXX CORPORATION</p>
+                    <div class="percent">
+                        <p class="percent_content">クラッキング進捗率：<span id="percent_num">0%</span></p>
+                    </div>
+                    <p class="content">このPCへのアクセスはセキュリティ上の理由からブロックされています。<br>CPCサポートに電話してください:<br><span class="phone">(0101)XXXX-XXXX（無料電話）</span></p>
+                    <div class="btn">
+                        <div style="display: flex;align-items: center;"><img src="./img/kabe.png"><h1>CPC-CVK</h1></div>
+                        <p><span>許可する</span><span style="border:none;background: #f32c00;color: #fff;">拒否</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="regular_body">
+            <div class="phone_header">
+                <div class="wrapper">
+                    <div class="regular_hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <p class="regular_hamburger_text">MENU</p>
+                    </div>
+                    <nav class="regular_menu">
+                        <div class="menu_innner">
+                            <details class="menu_accordion">
+                                <summary>HOME APPLIANCE</summary>
+                                <div class="menu_accordion_menber">
+                                    <a class="menu_accordion_menber_text ">新着商品</a>
+                                    <a class="menu_accordion_menber_text ">人気商品</a>
+                                    <a class="menu_accordion_menber_text ">スタッフのおすすめ</a>
+                                    <a class="menu_accordion_menber_text ">特集</a>
+                                    <a class="menu_accordion_menber_text ">ニュース</a>
+                                </div>
+                            </details>
+                            <details class="menu_accordion">
+                                <summary>PC</summary>
+                                <div class="menu_accordion_menber">
+                                    <a class="menu_accordion_menber_text ">新着商品</a>
+                                    <a class="menu_accordion_menber_text ">人気商品</a>
+                                    <a class="menu_accordion_menber_text ">スタッフのおすすめ</a>
+                                    <a class="menu_accordion_menber_text ">特集</a>
+                                    <a class="menu_accordion_menber_text ">ニュース</a>
+                                </div>
+                            </details>
+                            <details class="menu_accordion">
+                                <summary>GAME DEVICE</summary>
+                                <div class="menu_accordion_menber">
+                                    <a class="menu_accordion_menber_text ">新着商品</a>
+                                    <a class="menu_accordion_menber_text ">人気商品</a>
+                                    <a class="menu_accordion_menber_text ">スタッフのおすすめ</a>
+                                    <a class="menu_accordion_menber_text ">特集</a>
+                                    <a class="menu_accordion_menber_text ">ニュース</a>
+                                </div>
+                            </details>
+                            <details class="menu_accordion">
+                                <summary>ログイン・新規会員登録</summary>
+                                <div class="menu_accordion_menber">
+                                    <a class="menu_accordion_menber_text ">ログイン</a>
+                                    <a class="menu_accordion_menber_text ">会員登録</a>
+                                </div>
+                            </details>
+                        </div>
+                    </nav>
+                </div>
+                <div class="phone_title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path
+                            d="M0 1C0 0.734784 0.10536 0.48043 0.292902 0.292893C0.480444 0.105357 0.734806 0 1.00003 0H4.00012C4.22319 6.1623e-05 4.43984 0.0747014 4.6156 0.212049C4.79137 0.349398 4.91617 0.541568 4.97015 0.758L5.78018 4H29.0009C29.1477 4.00014 29.2927 4.03261 29.4256 4.0951C29.5585 4.1576 29.676 4.24859 29.7697 4.36161C29.8634 4.47463 29.9311 4.6069 29.968 4.74904C30.0048 4.89117 30.0099 5.03967 29.9829 5.184L26.9828 21.184C26.9399 21.4132 26.8183 21.6201 26.639 21.7691C26.4597 21.9181 26.2339 21.9998 26.0008 22H8.00025C7.7671 21.9998 7.54136 21.9181 7.36205 21.7691C7.18273 21.6201 7.06112 21.4132 7.01822 21.184L4.02012 5.214L3.2201 2H1.00003C0.734806 2 0.480444 1.89464 0.292902 1.70711C0.10536 1.51957 0 1.26522 0 1ZM6.20419 6L8.83027 20H25.1708L27.7969 6H6.20419ZM10.0003 22C8.93941 22 7.92196 22.4214 7.17179 23.1716C6.42163 23.9217 6.00019 24.9391 6.00019 26C6.00019 27.0609 6.42163 28.0783 7.17179 28.8284C7.92196 29.5786 8.93941 30 10.0003 30C11.0612 30 12.0787 29.5786 12.8288 28.8284C13.579 28.0783 14.0004 27.0609 14.0004 26C14.0004 24.9391 13.579 23.9217 12.8288 23.1716C12.0787 22.4214 11.0612 22 10.0003 22ZM24.0007 22C22.9398 22 21.9224 22.4214 21.1722 23.1716C20.4221 23.9217 20.0006 24.9391 20.0006 26C20.0006 27.0609 20.4221 28.0783 21.1722 28.8284C21.9224 29.5786 22.9398 30 24.0007 30C25.0616 30 26.0791 29.5786 26.8293 28.8284C27.5794 28.0783 28.0009 27.0609 28.0009 26C28.0009 24.9391 27.5794 23.9217 26.8293 23.1716C26.0791 22.4214 25.0616 22 24.0007 22ZM10.0003 24C10.5308 24 11.0395 24.2107 11.4146 24.5858C11.7896 24.9609 12.0004 25.4696 12.0004 26C12.0004 26.5304 11.7896 27.0391 11.4146 27.4142C11.0395 27.7893 10.5308 28 10.0003 28C9.46986 28 8.96114 27.7893 8.58605 27.4142C8.21097 27.0391 8.00025 26.5304 8.00025 26C8.00025 25.4696 8.21097 24.9609 8.58605 24.5858C8.96114 24.2107 9.46986 24 10.0003 24ZM24.0007 24C24.5312 24 25.0399 24.2107 25.415 24.5858C25.7901 24.9609 26.0008 25.4696 26.0008 26C26.0008 26.5304 25.7901 27.0391 25.415 27.4142C25.0399 27.7893 24.5312 28 24.0007 28C23.4703 28 22.9616 27.7893 22.5865 27.4142C22.2114 27.0391 22.0007 26.5304 22.0007 26C22.0007 25.4696 22.2114 24.9609 22.5865 24.5858C22.9616 24.2107 23.4703 24 24.0007 24Z"
+                            fill="black" />
+                    </svg>
+                    <p class="cart_text">CART</p>
+                </div>
+            </div>
+            <div class="img_site_area">
+                <img class="phone_title_img" src="img/claudio-schwarz-qjX0QBtDXto-unsplash.jpg">
+                <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E8%8C%B6%E8%89%B2%E3%81%AE%E6%9C%A8%E3%81%AE%E5%BA%8A%E3%81%AB%E7%99%BD%E3%81%84%E9%9B%BB%E6%BA%90%E3%82%BF%E3%83%83%E3%83%97-qjX0QBtDXto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a>が撮影した写真-->
+                <div class="move_textarea">
+                    <div class="move_textarea_title">
+                        <p>DISCOVER</p>
+                    </div>
+                    <div class="move_textarea_wrap">
+                        <a href=#daily_special class="move_textarea_text"><span>本日の目玉商品</span></a>
+                        <a href=#week_commodity class="move_textarea_text"><span>今月のおすすめ</span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="daily_special" class="daily_special_commodity_wiget">
+                <p data-special="correct" class="commodity_pickup_text">
+                    SPECIAL PICKUP
+                </p>
+                <div class="daily_special_commodity_div">
+                    <img class="commodity_img" src="img/andrey-matveev-D5hXm7eIhi8-unsplash.jpg">
+                    <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E5%A3%81%E3%81%AE%E4%B8%8A%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%83%B3%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%BA%E3%82%A2%E3%83%83%E3%83%97-D5hXm7eIhi8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@zelebb?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrey Matveev</a>が撮影した写真-->
+                    <p class="commodity_title">SHANG VEN FIVE</p>
+                    <p class="commodity_price">&yen;500,000<span class="tax">+ 税</span></p>
+                    <div class="commodity_info_div">
+                        <p class="commodity_info_title">商品紹介</p>
+                        <p class="commodity_texts">
+                            先週発売された新作グラフィックボード<br>CPUスピード業界一位の実績をもつSHANG社が手がけた新商品であり、その機能は...<span
+                                class="info_exe">もっと見る</span></p>
+                        <p class="commodity_info_title">商品詳細</p>
+                        <P class="commodity_texts">品番:1033FX20<br>原産地:中国</P>
+                        <p class="commodity_info_title">配送・キャンセル・返品</p>
+                        <P class="commodity_texts">購入後一年無料補償</P>
+                        <p class="commodity_info_title">評価</p>
+                        <p class="commodity_texts_evaluation">19件の評価<span class="evaluation">( 11件の高評価 )</span></p>
+                        <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="week_commodity" class="week_commodity_wiget">
+                <p class="commodity_pickup_text">
+                    WEEK PICKUP
+                </p>
+                <ul class="week_commodity_slider">
+                    <li class="week_commodity_slider_item">
+                        <div class="week_commodity_div">
+                            <img class="commodity_img" src="img/kenny-eliason-z3kBG5xIhjo-unsplash.jpg">
+                            <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/instagram%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3-z3kBG5xIhjo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@neonbrand?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kenny Eliason</a>が撮影した写真-->
+                            <p class="commodity_title">You Phone 20</p>
+                            <p class="commodity_price">&yen;80,000<span class="tax">+ 税</span></p>
+                            <div class="commodity_info_div">
+                                <p class="commodity_info_title">商品紹介</p>
+                                <p class="commodity_texts">
+                                    圧倒的な機能美。圧倒的な美しさ。<br>チタンで作られたボディは、傷を付けることすら出来ません。その耐久性は...<span
+                                        class="info_exe">もっと見る</span></p>
+                                <p class="commodity_info_title">評価</p>
+                                <p class="commodity_texts_evaluation">8,091件の評価<span class="evaluation">( 6,909件の高評価
+                                        )</span></p>
+                                <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="week_commodity_slider_item">
+                        <div class="week_commodity_div">
+                            <img class="commodity_img" src="img/charlesdeluvio-JWydjixDw1M-unsplash.jpg">
+                            <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E8%A1%A8%E9%9D%A2%E3%81%AB%E9%BB%92%E3%81%84usb%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96-JWydjixDw1M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a>が撮影した写真-->
+                            <p class="commodity_title">DENZHEG PreMIX 10I</p>
+                            <p class="commodity_price">&yen;20,000<span class="tax">+ 税</span></p>
+                            <div class="commodity_info_div">
+                                <p class="commodity_info_title">商品紹介</p>
+                                <p class="commodity_texts">
+                                    あなたの全てを快適に。<br>DENZHEG社が一年の歳月を掛けた、超高速読み書きが可能なSSDであり...<span
+                                        class="info_exe">もっと見る</span></p>
+                                <p class="commodity_info_title">評価</p>
+                                <p class="commodity_texts_evaluation">2,299件の評価<span class="evaluation">( 1,200件の高評価
+                                        )</span></p>
+                                <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="week_commodity_slider_item">
+                        <div class="week_commodity_div">
+                            <img class="commodity_img" src="img/kiran-ck-LSNJ-pltdu8-unsplash.jpg">
+                            <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E8%A1%A8%E9%9D%A2%E3%81%AB%E9%BB%92%E3%81%A8%E9%8A%80%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%83%95%E3%82%A9%E3%83%B3-LSNJ-pltdu8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@kiranck123?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kiran CK</a>が撮影した写真-->
+                            <p class="commodity_title">PhaNToM TEX AREA G4</p>
+                            <p class="commodity_price">&yen;9,800<span class="tax">+ 税</span></p>
+                            <div class="commodity_info_div">
+                                <p class="commodity_info_title">商品紹介</p>
+                                <p class="commodity_texts">
+                                    羽毛の様な軽さを、あなたに。<br>総重量180gの軽さから生み出されるその繊細な音は、聞く全ての人の耳を...<span
+                                        class="info_exe">もっと見る</span></p>
+                                <p class="commodity_info_title">評価</p>
+                                <p class="commodity_texts_evaluation">5,910件の評価<span class="evaluation">( 4,300件の高評価
+                                        )</span></p>
+                                <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="week_commodity_slider_item">
+                        <div class="week_commodity_div">
+                            <img class="commodity_img" src="img/sarah-dorweiler-qddLJnd51bU-unsplash.jpg">
+                            <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E3%83%9E%E3%83%83%E3%82%AF%E3%83%96%E3%83%83%E3%82%AF%E3%82%A8%E3%82%A2-qddLJnd51bU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@sarahdorweiler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sarah Dorweiler</a>が撮影した写真-->
+                            <p class="commodity_title">GEO ORANGE MEGA</p>
+                            <p class="commodity_price">&yen;120,000<span class="tax">+ 税</span></p>
+                            <div class="commodity_info_div">
+                                <p class="commodity_info_title">商品紹介</p>
+                                <p class="commodity_texts">
+                                    仕事専用にカスタマイズされた最新式<br>薄い、軽い、早い。オフィスワークの作業のみに特化したノートPCで...<span
+                                        class="info_exe">もっと見る</span></p>
+                                <p class="commodity_info_title">評価</p>
+                                <p class="commodity_texts_evaluation">2,115件の評価<span class="evaluation">( 1519件の高評価
+                                        )</span></p>
+                                <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="week_commodity_slider_item">
+                        <div class="week_commodity_div" style="margin:0px">
+                            <img class="commodity_img" src="img/con-se-VHFFZCDDxQ8-unsplash.jpg">
+                            <!--<a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E7%99%BD%E3%81%84%E8%83%8C%E6%99%AF%E3%81%AB%E9%BB%92%E3%81%A8%E9%8A%80%E3%81%AE%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC-VHFFZCDDxQ8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>の<a href="https://unsplash.com/ja/@steinmusic?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Con Se</a>が撮影した写真-->
+                            <p class="commodity_title">DAHN NM-23-10</p>
+                            <p class="commodity_price">&yen;3,600<span class="tax">+ 税</span></p>
+                            <div class="commodity_info_div">
+                                <p class="commodity_info_title">商品紹介</p>
+                                <p class="commodity_texts">アメリカで話題<br>フルレンジ型の低価格スピーカー。全方位でも全く色褪せない...<span
+                                        class="info_exe">もっと見る</span></p>
+                                <p class="commodity_info_title">評価</p>
+                                <p class="commodity_texts_evaluation">4,208件の評価<span class="evaluation">( 3,200件の高評価
+                                        )</span></p>
+                                <a class="commodity_info_move_btn"><span>商品詳細</span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="enterprise_footer">
+                <div class="enterprise_footer_innner">
+                    <div class="enterprise_footer_member">
+                        <p class="enterprise_footer_member_title">サステナビリティ</p>
+                    </div>
+                    <div class="enterprise_footer_member">
+                        <p class="enterprise_footer_member_title">購入後補償について</p>
+                        <p class="enterprise_footer_member_link">購入後一年内は無料補償・無料修理致します。</p>
+                    </div>
+                    <div class="enterprise_footer_member">
+                        <p class="enterprise_footer_member_title">お問い合わせ</p>
+                        <p class="enterprise_footer_member_link">△△県 〇〇町 □□市 0-3-1 <br>〒 000-123<br>TEL: 0123-456-890
+                        </p>
+                    </div>
+                    <div class="enterprise_footer_copyright">
+                        <p class="enterprise_footer_copyright_text">© 20□□ Gunnma Cyberpatrol Licensing.<br>All
+                            rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <footer >
+        <div class="footer_menu">
+            <a href="p4_1.html" class="button change_btn">ページ切り替え</a>
+            <div class="button" onclick="answer()">これが偽サイト！</div>
+        </div>
+    </footer>
+    <script>
+        // 待機関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.referrer.indexOf("top.html") != -1) {
+                document.getElementById("control").style.display = "inline";
+            }
+            run_virus();            
+        });
+
+
+        async function run_virus() {
+            await wait(2000);
+            document.getElementById("virus").style.display = "inline";
+            document.getElementsByClassName("regular_body")[0].style.filter = "blur(2px)";
+            $("#alert3").animate({
+                "opacity": "1",
+            });
+            await wait(300);
+            $("#alert1").animate({
+                "opacity": "1",
+                "marginTop": "20px"
+            });
+            await wait(100);
+            $("#alert2").animate({
+                "opacity": "1",
+                "marginBottom": "87px"
+            });
+            await wait(800);
+            $("#alert4").animate({
+                "opacity": "1",
+            });
+            for (let i = 0; i < 100; i++) {
+                document.getElementById("percent_num").textContent = (i+1)+"%";
+                await wait(100);
+                if (i % 12 == 0 || i % 15 == 0) {
+                    await wait(3000);
+                }
+                if (i == 6) {
+                    $("#alert5").animate({
+                        "opacity": "1",
+                        "marginBottom": "271px",
+                        "zIndex": "999"
+                    });
+                }
+            }
+
+        
+        }
+
+        async function answer() {
+            document.getElementById("control").style.display = "inline";
+            document.getElementById("control_str").style.display = "none";
+            document.getElementsByClassName("game_start")[0].style.display = "none";
+
+            document.getElementById("ans").style.display = "inline";
+            await wait(1000);
+            document.getElementById("ans").style.display = "none";
+
+            document.getElementById("control_str").innerHTML = "ブラウザ上で「ウイルスに感染した」「パソコンやスマホが壊れた」「情報を盗まれた」など書かれていても信用してはいけません！基本的にはブラウザを閉じるだけで問題ありません。";
+            document.getElementsByClassName("game_start")[0].getElementsByTagName("p")[0].innerText = "TOPページへ戻る";
+            document.getElementsByClassName("game_start")[0].setAttribute("onclick", 'location.href = "top.html";')
+            document.getElementsByClassName("game_start")[0].style.background = "#e44100"
+            document.getElementsByClassName("game_start")[0].style.display = "inline";
+            document.getElementById("control_str").style.display = "inline";
+            document.getElementById("control").style.display = "inline";
+            
+        }
+    </script>
+</body>
+
+</html>

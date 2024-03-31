@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* サイトヘッダー関連 */
+
+.regular_head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00174f;
+    display: flex;
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.regular_title {
+    color: #fff;
+    margin: auto;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+.regular_titile_highlight {
+    color: #f95a04;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+/* 正規サイト本体 */
+
+.regular_site {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.regular_body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.false_body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width:100%;
+}
+
+/* 偽サイト本体 */
+
+.false_site {
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* 正規サイトヘッダー */
+
+
+/* 正規サイトハンバーガーメニュー */
+
+.wrapper {
+    position: relative;
+    display: flex;
+}
+
+/* ハンバーガーメニュー */
+.regular_hamburger {
+    width: 40px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.regular_hamburger:hover {
+    cursor: pointer;
+}
+
+.regular_hamburger span {
+    background: #000;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    transition: 0.3s ease-out;
+}
+
+.regular_hamburger span:nth-of-type(1) {
+    top: 15px;
+}
+
+.regular_hamburger span:nth-of-type(3) {
+    bottom: 15px;
+}
+
+/* ハンバーガーメニューにactiveクラスがついたときのスタイル */
+.regular_hamburger.active span:nth-of-type(1) {
+    transform: translateY(9px) rotate(-45deg);
+    transition: 0.2s ease-out;
+}
+
+.regular_hamburger.active span:nth-of-type(3) {
+    transform: translateY(-9px) rotate(45deg);
+    transition: 0.2s ease-out;
+}
+
+.regular_hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+/* メニューテキスト */
+
+.regular_hamburger_text {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #00174f;
+    position: absolute;
+    bottom: -10px;
+    text-transform: uppercase;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: .02em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* メニュー */
+.regular_menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    transition: all 250ms ease-out;
+    transform: translateX(-100%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+.menu_innner {
+    width: 100%;
+    height: auto;
+    letter-spacing: .2em;
+    margin: 70px 0 0 0 ;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu_accordion {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.menu_accordion:not([open]) {
+    margin-bottom: 7px;
+}
+
+.menu_accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.5em 2em;
+    color: #00174f;
+    text-transform: uppercase;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: .1em;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu_accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu_accordion summary::before,
+.menu_accordion summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #00174f;
+    content: '';
+}
+
+.menu_accordion summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.menu_accordion summary::after {
+    transition: rotate .3s;
+}
+
+.menu_accordion[open] summary::after {
+    rotate: 90deg;
+}
+
+.menu_accordion[open] div a {
+    transform: none;
+    opacity: 1;
+}
+
+.menu_accordion_menber {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+
+.menu_accordion_menber_text {
+    color: #00174f;
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .2em 2em .2em 2em;
+    transition: transform .2s, opacity .2s;
+    color: #00174f;
+    font-size: 0.98em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+/* メニューにopenクラスがついたときのスタイル */
+.regular_menu.open {
+    transform: translate(0);
+    transition: 0.3s ease-out;
+}
+
+/* サイトヘッダー */
+
+
+.phone_header {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+.phone_title {
+    position: relative;
+    display: flex;
+    margin: 10px 10px 10px auto;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.phone_title:hover {
+    cursor: pointer;
+}
+
+.cart_text {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #00174f;
+    position: absolute;
+    bottom: -20px;
+    text-transform: uppercase;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: .02em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* サイトタイトル画像 */
+
+.img_site_area {
+    position: relative;
+}
+
+.phone_title_img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+}
+
+/* サイト間移動テキストエリア */
+
+.move_textarea {
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 400px;
+    padding: 0 20px 20px 20px;
+}
+
+.move_textarea_title {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: .02em;
+    margin: 0 auto 15px;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.move_textarea_title p {
+    font-size: 20px;
+}
+
+.move_textarea_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.move_textarea_text {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-transition: .25s;
+    transition: .25s;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #00174f;
+    border: 2px solid #fff;
+    background-color: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+}
+
+/* 本日の目玉商品 */
+
+.daily_special_commodity_wiget {
+    padding: 15px 1.4rem 15px 1.4rem;
+}
+
+.commodity_pickup_text {
+    padding: 0 0.375rem 0.4em;
+    font-size: 20px !important;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: .1em;
+    color: #00174f;
+}
+
+.daily_special_commodity_div {
+    height: auto;
+    border: 2px solid #00174f;
+}
+
+.commodity_img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+}
+
+.commodity_title {
+    color: #00174f;
+    display: block;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 0.6em 0.8em 0.3em;
+    font-weight: 600;
+}
+
+
+.commodity_price {
+    color: #00174f;
+    display: block;
+    font-family: "futurastdbold", Arial, sans-serif;
+    font-size: 0.87em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 0.1em 1em;
+    font-weight: 400;
+}
+
+.tax {
+    color: #969696;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+/* 商品紹介 */
+
+.commodity_info_div {
+    height: auto;
+    margin: 10px;
+}
+
+.commodity_info_title {
+    position: relative;
+    color: #969696;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    vertical-align: top;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.commodity_info_title::before {
+    background-color: #969696;
+    bottom: -4px;
+    content: "";
+    height: 5px;
+    position: absolute;
+    width: 60px;
+}
+
+.commodity_texts {
+    margin: 10px 0px;
+    color: #00174f;
+    font-size: 0.8em;
+    font-weight: 550;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.commodity_texts_evaluation {
+    color: #00174f;
+    margin: 10px 0px;
+    font-size: 0.9em;
+    font-weight: 550;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.evaluation {
+    color: #969696;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+}
+
+.info_exe {
+    color: #969696;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #969696;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.commodity_info_move_btn {
+    display: block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-transition: .25s;
+    transition: .25s;
+    letter-spacing: .2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #00174f;
+    border: 2px solid #00174f;
+    background-color: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 今月のおすすめ */
+
+.week_commodity_wiget {
+    padding: 0px 1.4rem 15px 1.4rem;
+    overflow: hidden;
+}
+
+.week_commodity_slider {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.week_commodity_slider_item {
+    display: flex;
+}
+
+.week_commodity_div {
+    width: 35vh;
+    margin-right: 1.4em;
+    height: 100%;
+    border: 2px solid #00174f;
+}
+
+
+/*　企業概要等フッター　 */
+
+.enterprise_footer {
+    width: 100%;
+    height: auto;
+    background-color: #cc0c2f;
+    letter-spacing: .2em;
+    padding: 1.2em 0;
+}
+
+.enterprise_footer_innner {
+    margin: 0 4% 12px 4%;
+}
+
+
+.enterprise_footer_member {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 12px;
+}
+
+.enterprise_footer_member_title {
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.enterprise_footer_member_link {
+    margin-top: 12px;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 550;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.enterprise_footer_copyright {
+    margin-top: 30px;
+}
+
+.enterprise_footer_copyright_text {
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 550;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/* サイトフッター */
+
+.regular_end {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    background-color: #00174f;
+}
+
+.switch_btn_back {
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding: 2px;
+    background: linear-gradient(to right,
+            #f95a04,
+            #501cfc);
+}
+
+.switch_btn {
+    padding: 5px 10px;
+    background-color: #00174f;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.switch_btn:hover {
+    background: #f95a04;
+}
+
+.switch_btn_txt {
+    color: #fff;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+/* 不正解のスタイル */
+
+.result {
+    z-index: 999;
+    position: absolute;
+    color: red;
+    font-size: 3em;
+}
+@media screen and (max-width: 630px) {
+    #alert2 .title {
+        display: none;
+    }
+} 
+@media screen and (max-width: 491px) { 
+    .regular_body {
+        padding-bottom: 100px;
+    }
+    #alert1 {
+        font-size: 13px;
+        width: 90%;
+    }
+    #alert2 {
+        bottom: 59px;
+        height: 82px;
+    }
+    #alert2 br {
+        display: inline!important;
+    }
+    #alert5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 315px) { 
+    .move_textarea_wrap {
+        display: none;
+    }
+}

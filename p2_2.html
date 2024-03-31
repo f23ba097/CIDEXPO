@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プレゼントキャンペーン</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel ="stylesheet" href="css/CPC.css">
+    <link rel ="stylesheet" href="css/slick.css">
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/slick.js"></script> -->
+    <style>
+    </style>
+</head>
+<body>
+    <div id="control">
+        <div class="control_content">
+            <p id="ans" style="color: rgb(255, 0, 43);">不正解！</p>
+            <p id="control_str">このゲームは正規サイトと偽サイトを見分けるゲームです！<br>「ページ切り替え」と書かれたボタンを押すとページが切り替わります。<br>
+                偽サイトだと思ったページで「これが偽サイト！」と<br>書かれたボタンを押してくださいね！</p>
+            <div class="game_start" onclick="document.getElementById('control').style.display = 'none';">
+                <p>ゲームスタート</p>
+            </div>
+        </div>
+    </div>
+    <div id="bool">
+        <h1>今見ているサイトは偽サイト！？</h1>
+    </div>
+
+    <main style="padding-bottom: 100px;">
+        <header id="head">
+            <img src="./img/browser.png" alt="ブラウザーアイコン" width="80px">
+            <div>
+                <p class="head_1">20XX年間お客様 感謝デー</p>
+                <p class="head_2">賞品プレゼントキャンペーン</p>
+            </div>
+        </header>
+        <div id="content">
+            <p class="date">2023年12月25日</p>
+            <h1 style=" color: #1123aa; ">プレゼントキャンペーン</h1>
+            <p class="explanation"><span>ご参加ありがとうございます。本日は次から賞品をお選びいただけます。</span><br>キャンペーン期間：2023/12/01～2023/12/31<br>※1日1回ご応募いただけます。</p>
+
+            <div class="content_child">
+                <img src="./img/sm.jpg" class="item_img">
+                <div>
+                    <div style="text-align: left;">
+                        <h1 style="font-size: 20px;">最新スマートフォン</h1>
+                        <br>
+                        <p>定価：<span style="color: red; font-weight: bold;"><s>￥116,800</s></span></p>
+                        <p>キャンペーン価格：<span style="color: rgba(15, 182, 0, 0.925); font-weight: bold;">￥0</span></p>
+                    </div>
+                    <div id="get_button">
+                        <p>1口応募する</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content_child content_comment" style="margin-top: 10px;">
+                <div class="comment">
+                    <p>あい****お様</p>
+                    <p>応募しました！当たるのが楽しみです！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　10分前</span></p>
+                </div>
+                <div class="comment">
+                    <p>azu***様</p>
+                    <p>以前当たったので今回も当てたいです！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　42分前</span></p>
+                </div>
+                <div class="comment">
+                    <p>sfj***dsaf様</p>
+                    <p>あたれーー！！今のところ当たっていませんが頑張ります！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　3時間前</span></p>
+                </div>
+                <div class="comment">
+                    <p>うだ***しか様</p>
+                    <p>本当に当たるのかなー？ぼちぼち続けてみます！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　6時間前</span></p>
+                </div>
+                <div class="comment">
+                    <p>かた**か様</p>
+                    <p>前から欲しかったやつです！当たりますように！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　2日前</span></p>
+                </div>
+                <div class="comment">
+                    <p>いい****しん様</p>
+                    <p>友達も応募しました！このキャンペーンは嬉しいですね！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　2日前</span></p>
+                </div>
+                <div class="comment" style="margin-bottom: 0;">
+                    <p>きん***ろう様</p>
+                    <p>応募しました～！当たったら報告しますね！</p>
+                    <p style="font-size: 14px;color: #5161da;cursor: pointer;"><span>いいね！・返信</span><span style="color: rgb(71, 71, 71);">　3日前</span></p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer >
+        <div class="footer_menu">
+            <a href="p2_1.html" class="button change_btn">ページ切り替え</a>
+            <div class="button" onclick="answer()">これが偽サイト！</div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.referrer.indexOf("top.html") != -1) {
+                document.getElementById("control").style.display = "inline";
+            }
+        });
+        // 待機関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        async function answer() {
+            document.getElementById("control").style.display = "inline";
+            document.getElementById("control_str").style.display = "none";
+            document.getElementsByClassName("game_start")[0].style.display = "none";
+
+            document.getElementById("ans").style.display = "inline";
+            await wait(1000);
+            document.getElementById("ans").style.display = "none";
+
+            document.getElementById("control_str").innerHTML = "高価な商品が無料で手に入ることは滅多にありません！ページ下部の口コミでも当たっている人が続出していますが、そんな簡単に当たることはありません！";
+            document.getElementsByClassName("game_start")[0].getElementsByTagName("p")[0].innerText = "次のゲームへ進む";
+            document.getElementsByClassName("game_start")[0].setAttribute("onclick", 'location.href = "p3_1.html";')
+            document.getElementsByClassName("game_start")[0].style.background = "#e44100"
+            document.getElementsByClassName("game_start")[0].style.display = "inline";
+            document.getElementById("control_str").style.display = "inline";
+            document.getElementById("control").style.display = "inline";
+            
+        }
+    </script>
+</body>
+</html>

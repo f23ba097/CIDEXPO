@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通販サイト　C1Dショップ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel ="stylesheet" href="css/CPC.css">
+    <link rel ="stylesheet" href="css/slick.css">
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/slick.js"></script> -->
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div id="control">
+        <div class="control_content">
+            <p id="ans" style="color: rgb(0 197 255);">正解！</p>
+            <p id="control_str"></p>
+            <div class="game_start" onclick="">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="bool">
+        <h1>今見ているサイトは偽サイト！？</h1>
+    </div>
+    <header>
+        <div class ="header_menu">
+            <ul class="header_menu_list">
+                <li class="menu_list"><img id="header_logo" src="img/logo1.PNG" alt="ロゴ画像" width="300" height="100"></li>
+                <li class="menu_list"><h3 class="header_button">商品を探す</h3></li>
+                <li class="menu_list"><h3 class="header_button">カート</h3></li>
+                <li class="menu_list"><h3 class="header_button">マイページ</h3></li>
+                <li class="menu_list"><h3 class="header_button">お問い合わせ</h3></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+
+    <main style="padding-bottom: 100px;">
+        <div class ="product">
+            <h1>COLOMAG</h1>
+            <img src="img/item.PNG" alt="商品の画像" id="product_img">
+            <p id="shop_info">販売元：匿名</p>
+            <div id="product_name">
+                
+                <h2>マグカップ三点セット<br><span style="font-size: 18px;">黒・ミントグリーン・レッド</span></h2>
+                
+                <!-- <p id="shop_info_tex">住所:〒123-5678<br>埼玉県野原市春日町45丁目810番地5<br>TEL:0756-21341123</p> -->
+            </div>
+            
+            <div id="product_price">
+                <p><u>価格:<s>定価¥1500</s></u></p>
+                <p><span>¥250!!</span></p>
+            </div>
+            <div id="product_info">
+                <h2>商品説明</h2>
+                <div id="info">
+                    <p>温かい飲み物やスープなどを飲むときにおすすめ！</p>
+                    <P>[黒、ミントグリーン、赤]の三色セット！</P>
+                    <P>三色セットのなのでカップルやご家族にもピッタリ</P>
+                    <p>耐熱　耐冷　電磁レンジ　オーブン対応</p>
+                    
+                </div>                
+            </div>
+            <div id="product_info">
+                <h2>出品者情報</h2>
+                <div id="info">
+                    <p id="shop_info_tex">住所:登録なし<br>TEL:登録なし</p>
+                </div>                
+            </div>
+            <br>
+            <p><u>海外からの発送のためお時間かかります。<br>配送中の破損等に関して一切の保証はいたしません<br>一切の返金、返品、交換の対応は受け付けません</u></p>
+            <div class="buy">
+                <a id="buy_button">購入</a>
+                <!-- <p id="buy_info">ｸﾘｯｸでカートに追加</p> -->
+                <!-- <h3 id="buy_text">カートに追加しました</h3> -->
+            </div>
+            <br>
+            <br>
+            <div id="product_rev">
+                <h2>評價:⭐4.9</h2>
+                <div id ="cus_rev">
+                    <div id ="rev_1">
+                        <p>ryu_0102さん:⭐⭐⭐⭐⭐</p>
+                        <hr>
+                        <p>送られてきたときの梱包も丁寧でした！</p>
+                        <p>私は3つ持っていて、ガールフレンドと一緒に使っています！</p>
+                        <p>防寒だけでなく、朝のコーヒーを飲むときにも重宝しています</p>
+                        <p>3枚セットで250円はお得です！</p>
+                        <p>お勧めです！</p>
+                    </div>
+                    <br>
+                    <div id="rev_2">
+                        <p>田中トシオさん:⭐⭐⭐⭐⭐</p>
+                        <hr>
+                        <p>3枚で250円と安くてとても暖かいです！！</p>
+                        <p>保溫性が良いので、スープやご飯によく使われます。</p>
+                        <p>計3個あるので來客時にも便利！</p>
+                    </div>
+                    <br>
+                    <div id="rev_3">
+                        <p>wer_112さん:⭐</p>
+                        <hr>
+                        <p>箱は潰れてるし、２つしか入ってないし、マグカップが最初からかけてた</p>
+                        <p>安いなとは思っていたがやっぱりそれ相応って感じだった</p>
+                        <p>電子レンジ対応とか書いてあるけど、途中で割れた</p>
+                        <p>保温性もそんなになく、すぐ冷めた</p>
+                        <p>他社のコピー商品だと思います</p>
+                        <p>騙されないように気をつけて</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_menu">
+            <a href="p1_1.html" class="button change_btn">ページ切り替え</a>
+            <div class="button"  onclick="answer()">これが偽サイト！</div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.referrer.indexOf("top.html") != -1) {
+                document.getElementById("control").style.display = "inline";
+            }
+        });
+        // 待機関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        async function answer() {
+            document.getElementById("control").style.display = "inline";
+            document.getElementById("control_str").style.display = "none";
+            document.getElementsByClassName("game_start")[0].style.display = "none";
+
+            document.getElementById("ans").style.display = "inline";
+            await wait(1000);
+            document.getElementById("ans").style.display = "none";
+
+            document.getElementById("control_str").innerHTML = "価格が安すぎたりや出品者情報が無い、評価が高すぎる、漢字が変など怪しい要素は見つけられましたか？怪しいと思ったら利用を控えることが大切です！";
+            document.getElementsByClassName("game_start")[0].getElementsByTagName("p")[0].innerText = "次のゲームへ進む";
+            document.getElementsByClassName("game_start")[0].setAttribute("onclick", 'location.href = "p2_1.html";')
+            document.getElementsByClassName("game_start")[0].style.background = "#e44100"
+            document.getElementsByClassName("game_start")[0].style.display = "inline";
+            document.getElementById("control_str").style.display = "inline";
+            document.getElementById("control").style.display = "inline";
+            
+        }
+    </script>
+</body>
+</html>

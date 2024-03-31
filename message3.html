@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM体験</title>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/css/5-4-1.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="pop_up blur">
+        <div class="control">
+            <h3>
+                <span id="ityped"></span>
+            </h3>
+            <div class="choice">
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1 id="headstr">メッセージ</h1>
+    </header>
+    <main>
+        <div id="Contact_form">
+            <div id="bulletin_board">
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="page_footer">
+
+    </footer>
+
+    <script>
+        // メッセージのやり取りを進行する関数
+        async function exchange() {
+            // スタートボタン削除
+            document.getElementById("next_btn").remove()
+            // ポップアップ非表示
+            document.getElementsByClassName("pop_up")[0].className = "pop_up";
+            document.getElementsByClassName("pop_up")[0].style.display = "none";
+            // message_arrayの監視開始
+            add_message();
+            message_array.push(["最近お金が足りなくてやばい・・・バイトじゃお金足りないんだよね", "me"]);
+            message_array.push(["丁度おすすめのバイトあるんだけど知りたい？", "enemy"]);
+            message_array.push(["ほんと！どんな仕事？？\n簡単ならやってみようかな", "me"]);
+            message_array.push(["本当に簡単だよ！地域のお年寄りの家にある荷物を預かるだけ！", "enemy"]);
+            message_array.push(["1回で報酬は10万円!!採用枠あと1人だけみたいだけど、どうする？", "enemy"]);
+            message_array.push(["show_pop_up", '{ "genre": "質問", "message": "地元の友達と連絡していたところ高単価のバイトを紹介されました。あなたならどうする？", "button1_txt": "バイトに応募する", "button2_txt": "誘いを断る", "correct_answer": "2", "btn1_content":"高額で簡単な仕事、実は闇バイトかもしれません。加害者にならない為にも怪しい仕事は断るようにしましょう!", "btn2_content":"素晴らしいですね！知らず知らずのうちに詐欺に加担することも…。怪しい仕事は断るようにしましょう!"}'])
+        }
+        
+        // ゲームのシナリオを進行するメインの関数
+        async function scenario_start() {
+            // 最初のゲームスタートポップアップ
+            ityped.init(document.querySelector("#ityped"), { strings: ['次は闇バイトの被害体験です'], loop: false });
+            await wait(4500);
+            // テキストを消し、ボタンを出現させる
+            let txt_elm = document.getElementById("ityped");
+            let txt_count = document.getElementById("ityped").textContent.length;
+            for (let i = 0; i < txt_count; i++) {  // 文字をゆっくり削除するためのfor文
+                txt_elm.textContent = txt_elm.textContent.slice(0, txt_elm.textContent.length - 1);
+                await wait(80);
+            }
+            // スタートボタン出現
+            document.getElementsByClassName("control")[0].getElementsByTagName("h3")[0].innerHTML = '<span id="ityped"><button id="next_btn" onclick="exchange();" class="blur">スタート</button></span>';  // ここでテキスト削除完了
+        }
+
+
+        scenario_start();
+
+
+    </script>
+</body>
+
+</html>

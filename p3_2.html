@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログインページ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel ="stylesheet" href="css/CPC.css">
+    <link rel ="stylesheet" href="css/slick.css">
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/slick.js"></script> -->
+    <style>
+    </style>
+</head>
+<body>
+    <div id="control">
+        <div class="control_content">
+            <p id="ans" style="color: rgb(255, 0, 43);">不正解！</p>
+            <p id="control_str"></p>
+            <div class="game_start" onclick="document.getElementById('control').style.display = 'none';">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="bool">
+        <h1>今見ているサイトは偽サイト！？</h1>
+    </div>
+
+    <main style="padding-bottom: 100px;">
+        <header id="head" style="background: #232323;">
+            <div class="tab_elem">
+                <p>🢀</p>
+                <p style="color: #656565;">🢂</p>
+                <img src="./img/reload.png">
+            </div>
+            <div class="address_bar">
+                <img src="./img/lock.png" width="30px" style="margin-right: 2px; width: 22px; ">
+                <p>https://cid.com/login_page</p>
+            </div>
+        </header>
+        <div id="content">
+           <h1 style="margin-top: 20px;">ログインページ</h1>
+            
+           <div id="login_form">
+                <h4>ID</h4>
+                <input type="text">
+                <h4 style="margin-top: 20px;">パスワード</h4>
+                <input type="text">
+                <p>※IDまたはパスワードを忘れた場合は<span style="color: #4fa5ff;text-decoration: underline;">こちら</span></p>
+
+                <div class="login">
+                    <p>ログイン</p>
+                </div>
+                <div class="singup">
+                    <p>新規会員登録</p>
+                </div>
+           </div>
+             
+        </div>
+    </main>
+    <footer >
+        <div class="footer_menu">
+            <a href="p3_1.html" class="button change_btn">ページ切り替え</a>
+            <div class="button" onclick="answer()">これが偽サイト！</div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.referrer.indexOf("top.html") != -1) {
+                document.getElementById("control").style.display = "inline";
+            }
+        });
+        // 待機関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        async function answer() {
+            document.getElementById("control").style.display = "inline";
+            document.getElementById("control_str").style.display = "none";
+            document.getElementsByClassName("game_start")[0].style.display = "none";
+
+            document.getElementById("ans").style.display = "inline";
+            await wait(1000);
+            document.getElementById("ans").style.display = "none";
+
+            document.getElementById("control_str").innerHTML = "URLがランダムな英数字であったり、http通信の場合、偽サイトの可能性が高いです。ログイン情報は信頼できるページから入力しましょう！";
+            document.getElementsByClassName("game_start")[0].getElementsByTagName("p")[0].innerText = "次のゲームへ進む";
+            document.getElementsByClassName("game_start")[0].setAttribute("onclick", 'location.href = "p4_1.html";')
+            document.getElementsByClassName("game_start")[0].style.background = "#e44100"
+            document.getElementsByClassName("game_start")[0].style.display = "inline";
+            document.getElementById("control_str").style.display = "inline";
+            document.getElementById("control").style.display = "inline";
+            
+        }
+    </script>
+</body>
+</html>

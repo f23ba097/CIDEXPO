@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通販サイト　CIDショップ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel ="stylesheet" href="css/CPC.css">
+    <link rel ="stylesheet" href="css/slick.css">
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/slick.js"></script> -->
+</head>
+<body>
+    <div id="control">
+        <div class="control_content">
+            <p id="ans" style="color: rgb(255, 0, 43);display: none;">不正解！</p>
+            <p id="control_str">このゲームは正規サイトと偽サイトを見分けるゲームです！「ページ切り替え」と書かれたボタンを押すとページが切り替わります。
+                偽サイトだと思ったページで「これが偽サイト！」と書かれたボタンを押してくださいね！</p>
+            <div class="game_start" onclick="document.getElementById('control').style.display = 'none';">
+                <p>ゲームスタート</p>
+            </div>
+        </div>
+    </div>
+    <div id="bool">
+        <h1>今見ているサイトは偽サイト！？</h1>
+    </div>
+    <header>
+        <div class ="header_menu">
+            <ul class="header_menu_list">
+                <li class="menu_list"><img id="header_logo" src="img/logo2.PNG" alt="ロゴ画像" width="240" height="90"></li>
+                <li class="menu_list"><h3 class="header_button">商品を探す</h3></li>
+                <li class="menu_list"><h3 class="header_button">カート</h3></li>
+                <li class="menu_list"><h3 class="header_button">マイページ</h3></li>
+                <li class="menu_list"><h3 class="header_button">お問い合わせ</h3></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+
+    <main  style="padding-bottom: 100px;">
+        <div class ="product">
+            <h1>COLOMAG<sub>®</sub></h1>
+            <img src="img/item.PNG" alt="商品の画像" id="product_img">
+            <P id ="shop_info">販売元：タビノハコ</P>
+            <div id="product_name">
+                
+                <h2>マグカップ三点セット<br><span style="font-size: 18px;">黒・ミントグリーン・レッド</span></h2>
+
+            </div>
+                
+            <div id="product_price_true">
+                <h2>価格 ¥1500</h2>
+            </div>
+            <div id="product_info">
+                <h2>商品説明</h2>
+                <div id="info">
+                    <p>温かい飲み物やスープなどを飲むときにおすすめ！</p>
+                    <P>[黒、ミントグリーン、赤]の三色セット！</P>
+                    <P>三色セットのなのでカップルやご家族にもピッタリ</P>
+                    <p>耐熱　耐冷　電磁レンジ　オーブン対応</p>
+                    <P></P>
+                </div>                
+            </div>
+            <div id="product_info">
+                <h2>出品者情報</h2>
+                <div id="info">
+                    <p id="shop_info_tex">住所:〒368-0071<br>埼玉県北本市綾都町3丁目640番地33<br>TEL:0120-2075-3198</p>
+                </div>                
+            </div>
+            <br>
+            <P><u>最短3日〜5日でお届け</u></P>
+            <div class="buy">
+                <a id="buy_button">購入</a>
+                <!-- <p id="buy_info">クリックでカートに追加</p> -->
+                <!-- <h3 id="buy_text">カートに追加しました</h3> -->
+            </div>
+            <br>            
+            <br>
+            <div id="product_rev">
+                <h2>評価:⭐3.8</h2>
+                <div id ="cus_rev">
+                    <div id ="rev_1">
+                        <p>chu_oさん:⭐⭐⭐⭐</p>
+                        <hr>
+                        <p>箱が少し潰れた状態で送られてきたが、傷などはなかった。</p>
+                        <p>塗装はきれいで保温性はそこそこよくて使いやすい</p>
+                    </div>
+                    <br>
+                    <div id="rev_2">
+                        <p>dai_gさん:⭐⭐⭐</p>
+                        <hr>
+                        <p>使いやすくはあるが、若干小さいかなって感じた。</p>
+                        <p>保温性とかは文句なし</p>
+                    </div>
+                    <br>
+                    <div id="rev_3">
+                        <p>yuya9031さん:⭐⭐⭐⭐</p>
+                        <hr>
+                        <p>耐熱で電子レンジも対応しているので</p>
+                        <p>プリン作ったりするときに使ってます！</p>
+                        <p>少し小さいって書かれていたけど、</p>
+                        <p>プリントか作るにはちょうどいいです！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_menu">
+            <a href="p1_2.html" class="button change_btn">ページ切り替え</a>
+            <div href="" class="button" onclick="answer()">これが偽サイト！</div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.referrer.indexOf("top.html") != -1) {
+                document.getElementById("control").style.display = "inline";
+            }
+        });
+        // 待機関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        async function answer() {
+            document.getElementById("control").style.display = "inline";
+            document.getElementById("control_str").style.display = "none";
+            document.getElementsByClassName("game_start")[0].style.display = "none";
+
+            document.getElementById("ans").style.display = "inline";
+            await wait(1000);
+            document.getElementById("ans").style.display = "none";
+
+            document.getElementById("control_str").innerHTML = "価格が安すぎたりや出品者情報が無い、評価が高すぎる、漢字が変など怪しい要素は見つけられましたか？怪しいと思ったら利用を控えることが大切です！";
+            document.getElementsByClassName("game_start")[0].getElementsByTagName("p")[0].innerText = "次のゲームへ進む";
+            document.getElementsByClassName("game_start")[0].setAttribute("onclick", 'location.href = "p2_1.html";')
+            document.getElementsByClassName("game_start")[0].style.background = "#e44100"
+            document.getElementsByClassName("game_start")[0].style.display = "inline";
+            document.getElementById("control_str").style.display = "inline";
+            document.getElementById("control").style.display = "inline";
+            
+        }
+    </script>
+</body>
+</html>
